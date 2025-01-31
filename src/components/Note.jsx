@@ -1,10 +1,9 @@
-function Note({ text, id }) {
-    let displayText = (text != "") ? text : "Input text...";
+function Note({ text, id, deleteSelf }) {
     return (
-        <h1 style={{ border: "4px solid black" }}
-            key={id}>
-            {displayText}
-        </h1>
+        <div key={id}>
+            <h2 style={{ border: "4px solid black" }} > {text} </h2>
+            <button onClick={deleteSelf}>Delete</button>
+        </div>
     );
 };
 
